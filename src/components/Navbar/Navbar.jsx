@@ -18,7 +18,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 py-8">
+    <div className="navbar bg-base-100 py-8 max-w-7xl mx-auto">
       <div className="navbar-start">
         <Link to="/">
           <img className="w-40" src={logo} alt="" />
