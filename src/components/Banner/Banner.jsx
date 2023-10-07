@@ -33,7 +33,7 @@ const Banner = () => {
       } else {
         setIndex(0);
       }
-    }, 5000);
+    }, 6000);
     return () => clearInterval(interval);
   }, [index, slides.length]);
 
@@ -46,19 +46,19 @@ const Banner = () => {
         backgroundImage: `url(${slides[index]?.image || slides[1]?.image})`,
       }}
     >
-      <div className="max-w-7xl mx-auto border md:grid md:place-items-end w-full h-full relative">
+      <div className="max-w-7xl mx-auto md:grid md:place-items-end w-full h-full relative">
         <div className="flex justify-between absolute top-1/2 -translate-y-1/2 w-full">
           <div
             onClick={handlePrevSlide}
-            className="w-[50px] h-[50px] rounded-full bg-gray-700 grid place-items-center border border-white cursor-pointer"
+            className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] rounded-full bg-gray-700 grid place-items-center border border-white cursor-pointer"
           >
-            <AiOutlineLeft className="text-white text-2xl" />
+            <AiOutlineLeft className="text-white text-xl md:text-2xl" />
           </div>
           <div
             onClick={handleNextSlide}
-            className="w-[50px] h-[50px] rounded-full bg-gray-700 grid place-items-center border border-white cursor-pointer"
+            className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] rounded-full bg-gray-700 grid place-items-center border border-white cursor-pointer"
           >
-            <AiOutlineRight className="text-white text-2xl" />
+            <AiOutlineRight className="text-white text-xl md:text-2xl" />
           </div>
         </div>
         <div className="p-4 absolute top-52 left-1/2 -translate-x-1/2 md:static md:px-6 md:py-8 space-y-2 w-[90%] md:w-[500px]  bg-white shadow-2xl md:bg-opacity-80 text-black md:-mr-20 md:mb-20 ">
