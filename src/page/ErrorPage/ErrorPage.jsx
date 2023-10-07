@@ -8,7 +8,7 @@ const ErrorPage = () => {
         <div className="text-center py-4">
           <p className="uppercase">4o4 - the page can{`'`}t found</p>
           <Link to="/">
-            <button className="bg-orange-500 py-3 px-5 font-bold text-white mt-2 uppercase">
+            <button className="bg-[#0095bd] py-3 px-5 font-bold text-white mt-2 uppercase rounded-md">
               go to homepage
             </button>
           </Link>

@@ -1,10 +1,33 @@
+import { Link, NavLink } from "react-router-dom";
+import logo from "../../assets/logo.png";
 const Navbar = () => {
+  const navLinks = (
+    <>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="/services">Services</NavLink>
+      </li>
+      <li>
+        <NavLink to="/about">About Us</NavLink>
+      </li>
+      <li>
+        <NavLink to="/contact">Contact</NavLink>
+      </li>
+    </>
+  );
   return (
-    <div className="navbar bg-base-100">
-      <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+    <div className="navbar bg-base-100 py-8">
+      <div className="navbar-start">
+        <Link to="/">
+          <img className="w-40" src={logo} alt="" />
+        </Link>
       </div>
-      <div className="flex-none">
+      <div className="navbar-center">
+        <ul className="flex gap-6">{navLinks}</ul>
+      </div>
+      <div className="navbar-end">
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">

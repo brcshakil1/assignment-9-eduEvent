@@ -1,0 +1,28 @@
+{
+  "bannerSlider": [
+    {
+      "image": "https://i.ibb.co/LddwpPV/Workshops-and-Webinars.jpg",
+      "text": {
+        "eventTitle": "Unlock Your Potential",
+        "dateLocation": "November 15-17, 2023 | [City Name]",
+        "cta": "Register Now!"
+      }
+    },
+    {
+      "image": "https://i.ibb.co/nR39Ymj/Career-Fairs.jpg",
+      "text": {
+        "featuredSpeaker": "Meet Our Keynote Speaker: [Arif Khan]",
+        "highlights": "Engaging Workshops, Networking Opportunities, and More!",
+        "testimonial": "Joining last year's event was a game-changer for my career. - [Attendee Name]"
+      }
+    },
+    {
+      "image": "https://i.ibb.co/T2FNBmQ/Training-Programs.jpg",
+      "text": {
+        "earlyBirdDiscount": "Save 20% on Early Bird Registration!",
+        "eventTheme": "Exploring the Future of Learning",
+        "contactInfo": "Questions? Contact Us at [edueventpro@gmail.com] or [+123 4567-896]"
+      }
+    }
+  ]
+}
