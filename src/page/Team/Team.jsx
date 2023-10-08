@@ -16,7 +16,7 @@ const Team = () => {
       <h2 className="text-center text-2xl uppercase  md:text-4xl font-bold border-black text-black w-[280px] md:w-[380px] mx-auto border-l-4 border-r-4 md:mb-10 mb-6">
         Our People
       </h2>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
         {members.map((member) => (
           <Member key={member.id} member={member} />
         ))}

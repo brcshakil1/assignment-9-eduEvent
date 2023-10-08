@@ -9,6 +9,7 @@ import Contact from "../page/Contact/Contact";
 import Services from "../page/Services/Services";
 import SendMessage from "../components/SendMessage/SendMessage";
 import Team from "../page/Team/Team";
+import PrivetRoute from "./PrivetRoute";
 
 const Router = createBrowserRouter([
   {
@@ -39,7 +40,11 @@ const Router = createBrowserRouter([
       },
       {
         path: "/services/:id",
-        element: <ServiceDetails />,
+        element: (
+          <PrivetRoute>
+            <ServiceDetails />
+          </PrivetRoute>
+        ),
         loader: () => fetch("/services.json"),
       },
       {
