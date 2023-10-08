@@ -1,12 +1,28 @@
+import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/AuthProvider";
 
 const SignUp = () => {
+  const { createUser } = useContext(AuthContext);
+
+  const handleCreateUser = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const confirmPassword = e.target.confirmPassword.value;
+
+    createUser(email, password)
+      .then((result) => console.log(result.user))
+      .catch((err) => console.log(err.message));
+  };
+
   return (
     <div className=" min-h-screen py-20">
       <div className="hero-content py-8  md:py-14">
         <div className=" w-full md:w-[600px] border border-black py-10 md:py-14 px-6 md:px-10">
-          <form className="">
+          <form onSubmit={handleCreateUser} className="">
             <h2 className="text-2xl md:text-4xl font-semibold text-center">
               Sign up
             </h2>
@@ -67,7 +83,7 @@ const SignUp = () => {
             <p className="text-black text-xl pb-1.5">or</p>
             <div className="h-[1px] w-[100px] md:w-[160px] bg-gray-500"></div>
           </div>
-          <div className="flex items-center border border-black md:mx-8 mx-6 p-4 md:px-6 rounded-md cursor-pointer mt-5">
+          <div className="flex items-center border border-black p-4 md:px-6 rounded-md cursor-pointer mt-5">
             <FcGoogle className="text-xl" />
             <h2 className="mx-auto text-lg md:text-xl font-semibold ">
               Continue with google

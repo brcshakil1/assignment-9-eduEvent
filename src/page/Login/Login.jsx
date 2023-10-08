@@ -1,12 +1,26 @@
+import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/AuthProvider";
 
 const Login = () => {
+  const { userLogin } = useContext(AuthContext);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    userLogin(email, password)
+      .then((result) => console.log(result.user))
+      .catch((err) => console.log(err.message));
+  };
+
   return (
     <div className=" min-h-screen py-20">
       <div className="hero-content py-8  md:py-14">
         <div className=" w-full md:w-[600px] border border-black py-10 md:py-14 px-6 md:px-10">
-          <form className="">
+          <form onSubmit={handleLogin} className="">
             <h2 className="text-2xl md:text-4xl font-semibold text-center">
               Welcome back
             </h2>
@@ -17,6 +31,7 @@ const Login = () => {
               <input
                 type="email"
                 placeholder="name@email.com"
+                name="email"
                 className="border border-black rounded py-2 px-4"
                 required
               />
@@ -28,6 +43,7 @@ const Login = () => {
               <input
                 type="password"
                 placeholder="Enter your password"
+                name="password"
                 className="py-2 px-4 border border-black rounded"
                 required
               />
