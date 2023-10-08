@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
 import toast from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
 
 const SignUp = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, googleSignIn } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleCreateUser = (e) => {
     e.preventDefault();
@@ -33,6 +35,19 @@ const SignUp = () => {
       .then((result) => {
         if (result.user) {
           toast.success("User created successfully!");
+          navigate("/");
+        }
+        updateProfile(result.user, { displayName: name });
+      })
+      .catch((err) => toast.error(err.message));
+  };
+
+  const handleGoogleSignUp = () => {
+    googleSignIn()
+      .then((result) => {
+        if (result.user) {
+          toast.success("User created successfully!");
+          navigate("/");
         }
       })
       .catch((err) => toast.error(err.message));
@@ -103,7 +118,10 @@ const SignUp = () => {
             <p className="text-black text-xl pb-1.5">or</p>
             <div className="h-[1px] w-[100px] md:w-[160px] bg-gray-500"></div>
           </div>
-          <div className="flex items-center border border-black p-4 md:px-6 rounded-md cursor-pointer mt-5">
+          <div
+            onClick={handleGoogleSignUp}
+            className="flex items-center border border-black p-4 md:px-6 rounded-md cursor-pointer mt-5"
+          >
             <FcGoogle className="text-xl" />
             <h2 className="mx-auto text-lg md:text-xl font-semibold ">
               Continue with google
