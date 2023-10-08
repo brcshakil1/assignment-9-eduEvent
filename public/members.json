@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Emma Johnson",
+    "img": "https://i.ibb.co/d2XdR1H/member-2.jpg",
+    "position": "Event Director"
+  },
+  {
+    "id": 2,
+    "name": "Daniel Smith",
+    "img": "https://i.ibb.co/qB8rmLL/member-1.jpg",
+    "position": "Project Manager"
+  },
+  {
+    "id": 3,
+    "name": "Olivia Davis",
+    "img": "https://i.ibb.co/37m2dRZ/member-3.jpg",
+    "position": "Training Coordinator"
+  },
+  {
+    "id": 4,
+    "name": "William Lee",
+    "img": "https://i.ibb.co/QQJWk3s/member-4.jpg",
+    "position": "Guest Speaker Liaison"
+  },
+  {
+    "id": 5,
+    "name": "Sophia Wilson",
+    "img": "https://i.ibb.co/qFLQMwM/member-10.jpg",
+    "position": "Venue Coordinator"
+  },
+  {
+    "id": 6,
+    "name": "Michael Brown",
+    "img": "https://i.ibb.co/wdBhD21/member-6.jpg",
+    "position": "Marketing Specialist"
+  },
+  {
+    "id": 7,
+    "name": "Emily Anderson",
+    "img": "https://i.ibb.co/N7z1YzC/member-12.jpg",
+    "position": "Logistics Manager"
+  },
+  {
+    "id": 8,
+    "name": "James Taylor",
+    "img": "https://i.ibb.co/94M19md/member-11.jpg",
+    "position": "Budget Analyst"
+  }
+]

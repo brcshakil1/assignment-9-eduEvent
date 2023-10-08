@@ -6,7 +6,7 @@
     "contact": {
       "email": "contact@yourcompany.com",
       "phone": "+1-123-456-7890",
-      "address": "123 Main Street, City, Country"
+      "address": "Central road, Moulvibazar, Bangladesh"
     }
   },
   "services": [
@@ -15,14 +15,14 @@
       "title": "Workshops and Webinars",
       "description": "Our Workshops and Webinars are designed to provide in-depth knowledge and practical skills in a variety of fields. Whether you're a professional looking to upskill or a student eager to learn, our workshops and webinars offer engaging sessions led by industry experts. Join us for interactive learning experiences that will enhance your expertise.",
       "img": "https://i.ibb.co/4jQRR82/Workshops-and-Webinars.jpg",
-      "price": 99.99
+      "price": 399.99
     },
     {
       "id": 2,
       "title": "Career Fairs",
       "description": "Discover job opportunities and connect with top employers at our Career Fairs. Our events bring together job seekers and companies looking to hire talent. You'll have the chance to network, attend informative sessions, and even interview on the spot. Don't miss out on advancing your career.",
       "img": "https://i.ibb.co/tw6wWRD/Career-Fairs.jpg",
-      "price": 0.0
+      "price": 299.0
     },
     {
       "id": 3,
@@ -43,7 +43,7 @@
       "title": "Networking Events and Mixers",
       "description": "Join our Networking Events and Mixers to expand your professional connections. These gatherings provide a relaxed yet productive environment for professionals and students to meet, exchange ideas, and form valuable relationships. Networking has never been this enjoyable.",
       "img": "https://i.ibb.co/2tQztzk/Networking-Events-and-Mixers.jpg",
-      "price": 49.99
+      "price": 549.99
     },
     {
       "id": 6,
@@ -57,7 +57,7 @@
       "title": "Educational Expos and Trade Shows",
       "description": "Explore the latest educational trends and innovations at our Educational Expos and Trade Shows. These events bring together leading educational institutions, technology providers, and experts in the field. Discover new opportunities and resources to advance your education.",
       "img": "https://i.ibb.co/vzpCTH1/Educational-Expos-and-Trade-Shows.jpg",
-      "price": 0.0
+      "price": 750.0
     },
     {
       "id": 8,

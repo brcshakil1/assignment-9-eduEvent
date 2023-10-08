@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 
 const Banner = () => {
+  const [slides, setSlides] = useState([]);
   const [index, setIndex] = useState(0);
-  const slides = useLoaderData();
-  console.log(slides);
 
   //   next and previous slide
   const handleNextSlide = () => {
@@ -23,7 +21,12 @@ const Banner = () => {
     }
   };
 
-  console.log(index);
+  // fetch slider data
+  useEffect(() => {
+    fetch("/slides.json")
+      .then((res) => res.json())
+      .then((data) => setSlides(data));
+  }, []);
 
   // used setInterval for index
   useEffect(() => {

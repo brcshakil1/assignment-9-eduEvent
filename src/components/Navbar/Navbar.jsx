@@ -30,19 +30,24 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/services">Services</NavLink>
-      </li>
-      <li>
         <NavLink to="/about">About Us</NavLink>
       </li>
       <li>
         <NavLink to="/contact">Contact</NavLink>
       </li>
+      <li>
+        <NavLink to="/team">Team</NavLink>
+      </li>
+      {user && (
+        <li>
+          <NavLink to="/sendMessage">Send Message</NavLink>
+        </li>
+      )}
     </>
   );
 
   return (
-    <div className="flex justify-between items-center py-8 px-4 max-w-7xl mx-auto relative">
+    <div className="flex justify-between items-center p-4 max-w-7xl mx-auto relative">
       <div onClick={handleMenuToggle} className=" block md:hidden">
         {isTrue ? (
           <GrClose className="text-2xl z-50 absolute top-28 right-4 cursor-pointer" />
@@ -52,7 +57,7 @@ const Navbar = () => {
       </div>
       <div>
         <Link to="/">
-          <img className="w-32 md:w-40" src={logo} alt="" />
+          <img className="w-28 md:w-36" src={logo} alt="" />
         </Link>
       </div>
       {/* mobile nav start */}
