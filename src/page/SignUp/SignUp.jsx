@@ -22,7 +22,16 @@ const SignUp = () => {
       return;
     }
 
-    if (confirmPassword === "" || confirmPassword === " ") {
+    if (password.length !== 6) {
+      toast.error("Password must be at least 6 characters long");
+      return;
+    } else if (/[A-Z]/.test(password)) {
+      toast.error("Password must have a uppercase letter");
+      return;
+    } else if (/[!@#$%^&*()_+{}:;<>,.?~`]/.test(password)) {
+      toast.error("Password must have a special character");
+      return;
+    } else if (confirmPassword === "" || confirmPassword === " ") {
       toast.error("Confirm password is required");
       return;
     }
