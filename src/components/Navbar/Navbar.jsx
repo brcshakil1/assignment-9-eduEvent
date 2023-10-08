@@ -10,7 +10,7 @@ import toast from "react-hot-toast";
 
 const Navbar = () => {
   const [isTrue, setIsTrue] = useState(false);
-  const { user, userLogout } = useContext(AuthContext);
+  const { user, userLogout, loading } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleMenuToggle = () => {
@@ -33,18 +33,20 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/about">About Us</NavLink>
-      </li>
-      <li>
         <NavLink to="/contact">Contact</NavLink>
       </li>
       <li>
         <NavLink to="/team">Team</NavLink>
       </li>
       {user && (
-        <li>
-          <NavLink to="/sendMessage">Send Message</NavLink>
-        </li>
+        <>
+          <li>
+            <NavLink to="/sendMessage">Send Message</NavLink>
+          </li>
+          <li>
+            <NavLink to="/profile">Profile</NavLink>
+          </li>
+        </>
       )}
     </>
   );
@@ -110,7 +112,9 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a className="justify-between">Profile</a>
+                <a className="justify-between" title={user?.displayName}>
+                  {user?.displayName.slice(0, 15)}...
+                </a>
               </li>
               <li onClick={handleLogout}>
                 <a>Logout</a>
@@ -118,11 +122,13 @@ const Navbar = () => {
             </ul>
           </div>
         ) : (
-          <button className="py-2 px-4 bg-[#0095bd] rounded-md text-white font-bold">
+          !loading && (
             <Link to="/login" className="text-lg">
-              Login
+              <button className="py-2 px-4 bg-[#0095bd] rounded-md text-white font-bold">
+                Login
+              </button>
             </Link>
-          </button>
+          )
         )}
       </div>
     </div>

@@ -6,10 +6,10 @@ import Login from "../page/Login/Login";
 import SignUp from "../page/SignUp/SignUp";
 import ServiceDetails from "../page/ServiceDetails/ServiceDetails";
 import Contact from "../page/Contact/Contact";
-import Services from "../page/Services/Services";
 import SendMessage from "../components/SendMessage/SendMessage";
 import Team from "../page/Team/Team";
 import PrivetRoute from "./PrivetRoute";
+import Profile from "../page/Profile/Profile";
 
 const Router = createBrowserRouter([
   {
@@ -23,10 +23,6 @@ const Router = createBrowserRouter([
         loader: () => fetch("/services.json"),
       },
       {
-        path: "/services",
-        element: <Services />,
-      },
-      {
         path: "/login",
         element: <Login />,
       },
@@ -36,8 +32,22 @@ const Router = createBrowserRouter([
       },
       {
         path: "/sendMessage",
-        element: <SendMessage />,
+        element: (
+          <PrivetRoute>
+            <SendMessage />
+          </PrivetRoute>
+        ),
       },
+      {
+        path: "/contact",
+        element: <Contact />,
+        loader: () => fetch("/services.json"),
+      },
+      {
+        path: "/team",
+        element: <Team />,
+      },
+
       {
         path: "/services/:id",
         element: (
@@ -48,13 +58,12 @@ const Router = createBrowserRouter([
         loader: () => fetch("/services.json"),
       },
       {
-        path: "/contact",
-        element: <Contact />,
-        loader: () => fetch("/services.json"),
-      },
-      {
-        path: "/team",
-        element: <Team />,
+        path: "/profile",
+        element: (
+          <PrivetRoute>
+            <Profile />
+          </PrivetRoute>
+        ),
       },
     ],
   },

@@ -42,7 +42,7 @@ const Login = () => {
   return (
     <div className=" min-h-screen py-20">
       <div className="hero-content py-8  md:py-14">
-        <div className=" w-full md:w-[600px] border border-black py-10 md:py-14 px-6 md:px-10">
+        <div className=" w-full md:w-[600px] mx-auto border border-black py-10 md:py-14 px-6 md:px-10">
           <form onSubmit={handleLogin} className="">
             <h2 className="text-2xl md:text-4xl font-semibold text-center">
               Welcome back
@@ -90,7 +90,7 @@ const Login = () => {
             className="flex items-center border border-black md:mx-8 mx-6 p-4 md:px-6 rounded-md cursor-pointer mt-5"
           >
             <FcGoogle className="text-xl" />
-            <h2 className="mx-auto text-base md:text-xl font-semibold ">
+            <h2 className="mx-auto text-sm md:text-xl font-semibold ">
               Continue with google
             </h2>
           </div>

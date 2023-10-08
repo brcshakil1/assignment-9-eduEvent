@@ -48,7 +48,7 @@ const SignUp = () => {
       .then((result) => {
         if (result.user) {
           toast.success("User created successfully!");
-          navigate(location?.state ? location.state : "/");
+          navigate(location?.state ? location?.state : "/");
         }
       })
       .catch((err) => toast.error(err.message));
@@ -57,7 +57,7 @@ const SignUp = () => {
   return (
     <div className=" min-h-screen py-20">
       <div className="hero-content py-8  md:py-14">
-        <div className=" w-full md:w-[600px] border border-black py-10 md:py-14 px-6 md:px-10">
+        <div className=" w-full md:w-[600px] mx-auto border border-black py-10 md:py-14 px-6 md:px-10">
           <form onSubmit={handleCreateUser} className="">
             <h2 className="text-2xl md:text-4xl font-semibold text-center">
               Sign up

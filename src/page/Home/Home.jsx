@@ -5,6 +5,7 @@ import Services from "../Services/Services";
 import Team from "../Team/Team";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   useEffect(() => {
@@ -19,8 +20,11 @@ const Home = () => {
       <div data-aos="fade-left">
         <Team />
       </div>
-      <div data-aos="fade-up">
+      <div data-aos="fade-right">
         <Contact />
+      </div>
+      <div data-aos="fade-left">
+        <Footer />
       </div>
     </div>
   );
