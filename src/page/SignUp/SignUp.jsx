@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
 import toast from "react-hot-toast";
 import { updateProfile } from "firebase/auth";
 
 const SignUp = () => {
   const { createUser, googleSignIn } = useContext(AuthContext);
+  const location = useLocation();
   const navigate = useNavigate();
 
   const handleCreateUser = (e) => {
@@ -35,7 +36,7 @@ const SignUp = () => {
       .then((result) => {
         if (result.user) {
           toast.success("User created successfully!");
-          navigate("/");
+          navigate(location?.state ? location.state : "/");
         }
         updateProfile(result.user, { displayName: name });
       })
@@ -47,7 +48,7 @@ const SignUp = () => {
       .then((result) => {
         if (result.user) {
           toast.success("User created successfully!");
-          navigate("/");
+          navigate(location?.state ? location.state : "/");
         }
       })
       .catch((err) => toast.error(err.message));

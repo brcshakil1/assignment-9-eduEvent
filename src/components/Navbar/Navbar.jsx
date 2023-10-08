@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { RiMenuFill } from "react-icons/ri";
 import { GrClose } from "react-icons/gr";
@@ -10,8 +10,8 @@ import toast from "react-hot-toast";
 
 const Navbar = () => {
   const [isTrue, setIsTrue] = useState(false);
-
   const { user, userLogout } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleMenuToggle = () => {
     setIsTrue(!isTrue);
@@ -20,7 +20,10 @@ const Navbar = () => {
   // user logout
   const handleLogout = () => {
     userLogout()
-      .then(() => toast("User logged out"))
+      .then(() => {
+        toast("User logged out");
+        navigate("/");
+      })
       .catch((err) => toast(err.message));
   };
 
