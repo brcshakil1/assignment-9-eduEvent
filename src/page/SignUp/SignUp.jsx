@@ -16,9 +16,9 @@ const SignUp = () => {
               </label>
               <input
                 type="text"
-                placeholder="name@email.com"
+                placeholder="Enter your full name"
                 name="name"
-                className="border border-black py-2 px-4"
+                className="border border-black py-2 px-4 rounded"
                 required
               />
             </div>
@@ -30,7 +30,7 @@ const SignUp = () => {
                 type="email"
                 placeholder="name@email.com"
                 name="email"
-                className="border border-black py-2 px-4"
+                className="border border-black py-2 px-4 rounded"
                 required
               />
             </div>
@@ -42,24 +42,19 @@ const SignUp = () => {
                 type="password"
                 placeholder="Enter your password"
                 name="password"
-                className="py-2 px-4 border border-black"
+                className="py-2 px-4 border border-black rounded"
                 required
               />
-              <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
-                  Forgot password?
-                </a>
-              </label>
             </div>
-            <div className="form-control py-5">
+            <div className="form-control pb-5">
               <label className="label pb-3">
-                <span className="label-text text-lg">Password</span>
+                <span className="label-text text-lg">Confirm password</span>
               </label>
               <input
                 type="password"
                 placeholder="Enter your password"
                 name="confirmPassword"
-                className="py-2 px-4 border border-black"
+                className="py-2 px-4 border border-black rounded"
                 required
               />
             </div>

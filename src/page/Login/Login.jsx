@@ -17,7 +17,7 @@ const Login = () => {
               <input
                 type="email"
                 placeholder="name@email.com"
-                className="border border-black py-2 px-4"
+                className="border border-black rounded py-2 px-4"
                 required
               />
             </div>
@@ -28,7 +28,7 @@ const Login = () => {
               <input
                 type="password"
                 placeholder="Enter your password"
-                className="py-2 px-4 border border-black"
+                className="py-2 px-4 border border-black rounded"
                 required
               />
               <label className="label">
@@ -53,7 +53,7 @@ const Login = () => {
             </h2>
           </div>
           <p className="text-center text-lg pt-4">
-            Already have an account on EduEvent?{" "}
+            New to EduEvent?{" "}
             <Link className="text-blue-600" to="/signUp">
               Sign up
             </Link>
