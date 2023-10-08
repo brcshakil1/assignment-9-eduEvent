@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const { userLogin } = useContext(AuthContext);
@@ -12,8 +13,16 @@ const Login = () => {
     const password = e.target.password.value;
 
     userLogin(email, password)
-      .then((result) => console.log(result.user))
-      .catch((err) => console.log(err.message));
+      .then((result) => {
+        if (result.user) {
+          toast.success("User logged in successfully!");
+        }
+      })
+      .catch((err) => {
+        if (err) {
+          toast.error("Your email or password is wrong. Please try again");
+        }
+      });
   };
 
   return (

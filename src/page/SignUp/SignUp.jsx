@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
+import toast from "react-hot-toast";
 
 const SignUp = () => {
   const { createUser } = useContext(AuthContext);
@@ -13,9 +14,28 @@ const SignUp = () => {
     const password = e.target.password.value;
     const confirmPassword = e.target.confirmPassword.value;
 
+    if (name === "" || name === " ") {
+      toast.error("Full name is required");
+      return;
+    }
+
+    if (confirmPassword === "" || confirmPassword === " ") {
+      toast.error("Confirm password is required");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      toast.error("Password doesn't match");
+      return;
+    }
+
     createUser(email, password)
-      .then((result) => console.log(result.user))
-      .catch((err) => console.log(err.message));
+      .then((result) => {
+        if (result.user) {
+          toast.success("User created successfully!");
+        }
+      })
+      .catch((err) => toast.error(err.message));
   };
 
   return (
@@ -28,19 +48,18 @@ const SignUp = () => {
             </h2>
             <div className="form-control">
               <label className="label pb-3">
-                <span className="label-text text-lg">Enter your full name</span>
+                <span className="label-text text-lg uppercase">Full name</span>
               </label>
               <input
                 type="text"
                 placeholder="Enter your full name"
                 name="name"
                 className="border border-black py-2 px-4 rounded"
-                required
               />
             </div>
             <div className="form-control">
               <label className="label pb-3">
-                <span className="label-text text-lg">Email</span>
+                <span className="label-text text-lg uppercase">Email</span>
               </label>
               <input
                 type="email"
@@ -52,7 +71,7 @@ const SignUp = () => {
             </div>
             <div className="form-control py-5">
               <label className="label pb-3">
-                <span className="label-text text-lg">Password</span>
+                <span className="label-text text-lg uppercase">Password</span>
               </label>
               <input
                 type="password"
@@ -64,14 +83,15 @@ const SignUp = () => {
             </div>
             <div className="form-control pb-5">
               <label className="label pb-3">
-                <span className="label-text text-lg">Confirm password</span>
+                <span className="label-text text-lg uppercase">
+                  Confirm password
+                </span>
               </label>
               <input
                 type="password"
                 placeholder="Enter your password"
                 name="confirmPassword"
                 className="py-2 px-4 border border-black rounded"
-                required
               />
             </div>
             <div className="form-control py-5 ">
