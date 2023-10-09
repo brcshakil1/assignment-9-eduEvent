@@ -14,16 +14,16 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <div className="max-w-7xl mx-auto" data-aos="fade-right">
+      <div className="max-w-7xl mx-auto" data-aos="fade-up">
         <Services />
       </div>
-      <div data-aos="fade-left">
+      <div data-aos="fade-up">
         <Team />
       </div>
-      <div data-aos="fade-right">
+      <div data-aos="fade-up">
         <Contact />
       </div>
-      <div data-aos="fade-left">
+      <div data-aos="fade-up">
         <Footer />
       </div>
     </div>
