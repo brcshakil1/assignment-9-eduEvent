@@ -62,7 +62,12 @@ const Navbar = () => {
       </div>
       <div>
         <Link to="/">
-          <img className="w-28 md:w-36" src={logo} alt="" />
+          <img
+            onClick={() => setIsTrue(false)}
+            className="w-28 md:w-36"
+            src={logo}
+            alt=""
+          />
         </Link>
       </div>
       {/* mobile nav start */}
