@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   const [slides, setSlides] = useState([]);
@@ -77,9 +78,11 @@ const Banner = () => {
               slides[index]?.text?.eventTheme}
           </p>
           {slides[index]?.text?.cta ? (
-            <button className="border py-2 px-4 border-black font-bold">
-              {slides[index]?.text?.cta}
-            </button>
+            <Link to="signUp">
+              <button className="border py-2 px-4 border-black font-bold">
+                {slides[index]?.text?.cta}
+              </button>
+            </Link>
           ) : (
             <p className="font-semibold">
               {slides[index]?.text?.testimonial ||

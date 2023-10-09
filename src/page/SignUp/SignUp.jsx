@@ -17,37 +17,36 @@ const SignUp = () => {
     const password = e.target.password.value;
     const confirmPassword = e.target.confirmPassword.value;
 
-    if (name === "" || name === " ") {
-      toast.error("Full name is required");
+    if (password.length < 6) {
+      toast.error("Password is less than 6 characters");
       return;
     }
 
-    if (password.length !== 6) {
-      toast.error("Password must be at least 6 characters long");
+    if (!/[A-Z]/.test(password)) {
+      toast.error("Don't have a capital letter");
       return;
-    } else if (/[A-Z]/.test(password)) {
-      toast.error("Password must have a uppercase letter");
-      return;
-    } else if (/[!@#$%^&*()_+{}:;<>,.?~`]/.test(password)) {
-      toast.error("Password must have a special character");
-      return;
-    } else if (confirmPassword === "" || confirmPassword === " ") {
-      toast.error("Confirm password is required");
+    }
+    if (!/[!#$%&? "]/.test(password)) {
+      toast.error(
+        "Don't have a special character. Example: !, #, $, %, & or ?"
+      );
       return;
     }
 
     if (password !== confirmPassword) {
-      toast.error("Password doesn't match");
+      toast.error("Password doesn't match.");
       return;
     }
 
     createUser(email, password)
       .then((result) => {
-        if (result.user) {
+        if (result) {
           toast.success("User created successfully!");
-          navigate(location?.state ? location.state : "/");
         }
-        updateProfile(result.user, { displayName: name });
+        updateProfile(result.user, {
+          displayName: name,
+        });
+        navigate(location?.state ? location?.state : "/");
       })
       .catch((err) => toast.error(err.message));
   };
@@ -68,7 +67,7 @@ const SignUp = () => {
       <div className="hero-content py-8  md:py-14">
         <div className=" w-full md:w-[600px] mx-auto border border-black py-10 md:py-14 px-6 md:px-10">
           <form onSubmit={handleCreateUser} className="">
-            <h2 className="text-2xl md:text-4xl font-semibold text-center">
+            <h2 className="text-2xl md:text-4xl font-semibold text-center text-[#333]">
               Sign up
             </h2>
             <div className="form-control">
@@ -80,6 +79,7 @@ const SignUp = () => {
                 placeholder="Enter your full name"
                 name="name"
                 className="border border-black py-2 px-4 rounded"
+                required
               />
             </div>
             <div className="form-control">
@@ -117,10 +117,13 @@ const SignUp = () => {
                 placeholder="Enter your password"
                 name="confirmPassword"
                 className="py-2 px-4 border border-black rounded"
+                required
               />
             </div>
             <div className="form-control py-5 ">
-              <button className="btn bg-[#0095bd] text-white">Sign up</button>
+              <button className="btn bg-[#1861c5] hover:bg-[#3c7cbe] text-white">
+                Sign up
+              </button>
             </div>
           </form>
           <div className="flex justify-center items-center gap-2 ">
@@ -133,13 +136,13 @@ const SignUp = () => {
             className="flex items-center border border-black p-4 md:px-6 rounded-md cursor-pointer mt-5"
           >
             <FcGoogle className="text-xl" />
-            <h2 className="mx-auto text-lg md:text-xl font-semibold ">
+            <h2 className="mx-auto text-lg md:text-xl font-semibold text-[#333]">
               Continue with google
             </h2>
           </div>
           <p className="text-center text-lg pt-4">
             Already have an account on EduEvent?{" "}
-            <Link className="text-blue-600" to="/login">
+            <Link className="text-[#1861c5] font-bold" to="/login">
               Log in
             </Link>
           </p>

@@ -7,3 +7,9 @@
 body {
     font-family: 'Roboto Mono', monospace;
 }
+
+ul a.active {
+    color: #1861c5;
+    text-decoration: underline;
+    font-weight: bold;
+}

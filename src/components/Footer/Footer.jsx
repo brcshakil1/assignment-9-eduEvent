@@ -3,7 +3,7 @@ import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="footer p-10 bg-[#0095bd] text-white">
+    <footer className="footer p-10 bg-[#222] text-white">
       <aside>
         <img className=" w-20 md:w-28" src={logo} alt="EduEvent" />
         <p>
@@ -22,9 +22,7 @@ const Footer = () => {
       <nav>
         <header className="footer-title">Company</header>
         <a className="link link-hover">About us</a>
-        <Link to="/contact">
-          <a className="link link-hover">Contact</a>
-        </Link>
+        <Link to="/contact">Contact</Link>
         <a className="link link-hover">Jobs</a>
         <a className="link link-hover">Press kit</a>
       </nav>

@@ -90,7 +90,7 @@ const Navbar = () => {
         {user && (
           <button
             onClick={handleLogout}
-            className="py-2 px-4 bg-[#0095bd] rounded-md text-white font-bold mt-5"
+            className="py-2 px-4 bg-[#1861c5] rounded-md text-white font-bold mt-5"
           >
             Logout
           </button>
@@ -113,7 +113,7 @@ const Navbar = () => {
             >
               <li>
                 <a className="justify-between" title={user?.displayName}>
-                  {user?.displayName.slice(0, 15)}...
+                  {user?.displayName}
                 </a>
               </li>
               <li onClick={handleLogout}>
@@ -124,7 +124,7 @@ const Navbar = () => {
         ) : (
           !loading && (
             <Link to="/login" className="text-lg">
-              <button className="py-2 px-4 bg-[#0095bd] rounded-md text-white font-bold">
+              <button className="py-2 px-4 bg-[#1861c5] rounded-md text-white font-bold">
                 Login
               </button>
             </Link>

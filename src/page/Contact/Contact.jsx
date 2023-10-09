@@ -11,19 +11,19 @@ const Contact = () => {
         <h2 className="text-center text-2xl uppercase  md:text-4xl font-bold border-black text-black w-[280px] md:w-[380px] mx-auto border-l-4 border-r-4 md:mb-10 mb-6">
           Contact with us
         </h2>
-        <p className=" text-justify max-w-full md:max-w-[600px] mx-auto">
+        <p className=" text-center max-w-full md:max-w-[650px] mx-auto">
           {data?.company?.description}
         </p>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 my-6 md:my-10">
-          <div className="border flex flex-col gap-2 items-center justify-center py-20 shadow-lg">
+          <div className=" flex flex-col gap-2 items-center justify-center py-20 shadow-lg">
             <MdAttachEmail className="text-3xl" />
             <p>{data?.company?.contact?.email}</p>
           </div>
-          <div className="border flex flex-col gap-2 items-center justify-center py-20 shadow-lg">
+          <div className=" flex flex-col gap-2 items-center justify-center py-20 shadow-lg">
             <AiFillPhone className="text-3xl" />
             <p>{data?.company?.contact?.phone}</p>
           </div>
-          <div className="border flex flex-col gap-2 items-center justify-center py-20 shadow-lg">
+          <div className=" flex flex-col gap-2 items-center justify-center py-20 shadow-lg">
             <FaRegAddressBook className="text-3xl" />
             <p>{data?.company?.contact?.address}</p>
           </div>

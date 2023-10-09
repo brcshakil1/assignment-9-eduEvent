@@ -1,9 +1,9 @@
 const SendMessage = () => {
   return (
     <div>
-      <div className="relative bg-gradient-to-b from-[#0095bd] to-[#53a7be] h-96 w-full">
+      <div className="relative bg-gradient-to-b from-[#1861c5] to-[#04306e] h-96 w-full">
         <div className="w-full flex items-center justify-center my-12">
-          <div className="absolute top-20 md:top-40 bg-white shadow rounded py-12 lg:px-28 px-8">
+          <div className="absolute top-20 md:top-40 bg-white shadow-2xl rounded py-12 lg:px-28 px-8">
             <p className="md:text-3xl text-xl font-bold leading-7 text-center text-gray-700">
               Let’s chat for your event!
             </p>
@@ -16,7 +16,7 @@ const SendMessage = () => {
                   tabIndex={0}
                   aria-label="Please input name"
                   type="name"
-                  className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-[#53a7be] mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100"
+                  className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-[#1861c5] mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100"
                   placeholder="Please input  name"
                 />
               </div>
@@ -28,7 +28,7 @@ const SendMessage = () => {
                   tabIndex={0}
                   aria-label="Please input email address"
                   type="name"
-                  className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-[#53a7be] mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100"
+                  className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-[#1861c5] mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100"
                   placeholder="Please input email address"
                 />
               </div>
@@ -43,7 +43,7 @@ const SendMessage = () => {
                   role="input"
                   aria-label="Please input company name"
                   type="name"
-                  className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-[#53a7be] mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 "
+                  className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-[#1861c5] mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 "
                   placeholder="Please input company name"
                 />
               </div>
@@ -55,7 +55,7 @@ const SendMessage = () => {
                   tabIndex={0}
                   aria-label="Please input country name"
                   type="name"
-                  className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-[#53a7be] mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100"
+                  className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-[#1861c5] mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100"
                   placeholder="Please input country name"
                 />
               </div>
@@ -70,7 +70,7 @@ const SendMessage = () => {
                   aria-label="leave a message"
                   role="textbox"
                   type="name"
-                  className="h-36 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-[#53a7be] mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none"
+                  className="h-36 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-[#1861c5] mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none"
                   defaultValue={""}
                 />
               </div>
@@ -80,7 +80,7 @@ const SendMessage = () => {
               policy and how we use data as stated
             </p>
             <div className="flex items-center justify-center w-full">
-              <button className="mt-9 text-base font-semibold leading-none text-white py-4 px-10 bg-[#0095bd] rounded hover:bg-[#53a7be] focus:ring-2 focus:ring-offset-2 focus:outline-none">
+              <button className="mt-9 text-base font-semibold leading-none text-white py-4 px-10 bg-[#1861c5] rounded hover:bg-[#3c73be] focus:ring-2 focus:ring-offset-2 focus:outline-none">
                 SUBMIT
               </button>
             </div>

@@ -38,29 +38,17 @@
       "img": "https://i.ibb.co/zH3Rj4P/Training-Programs.jpg",
       "price": 299.99
     },
+
     {
       "id": 5,
-      "title": "Networking Events and Mixers",
-      "description": "Join our Networking Events and Mixers to expand your professional connections. These gatherings provide a relaxed yet productive environment for professionals and students to meet, exchange ideas, and form valuable relationships. Networking has never been this enjoyable.",
-      "img": "https://i.ibb.co/2tQztzk/Networking-Events-and-Mixers.jpg",
-      "price": 549.99
-    },
-    {
-      "id": 6,
       "title": "Experiential Learning Experiences",
       "description": "Immerse yourself in hands-on Experiential Learning Experiences that bridge theory and practice. These interactive programs allow you to apply your knowledge in real-world scenarios, enhancing your skills and understanding. Get ready for transformative learning.",
       "img": "https://i.ibb.co/K9zgRqG/Experiential-Learning-Experiences.jpg",
       "price": 199.99
     },
+
     {
-      "id": 7,
-      "title": "Educational Expos and Trade Shows",
-      "description": "Explore the latest educational trends and innovations at our Educational Expos and Trade Shows. These events bring together leading educational institutions, technology providers, and experts in the field. Discover new opportunities and resources to advance your education.",
-      "img": "https://i.ibb.co/vzpCTH1/Educational-Expos-and-Trade-Shows.jpg",
-      "price": 750.0
-    },
-    {
-      "id": 8,
+      "id": 6,
       "title": "Professional Development Retreats",
       "description": "Join our Professional Development Retreats to recharge, learn, and grow. These retreats offer a unique blend of skill-building, leadership development, and personal growth in a relaxed setting. Invest in yourself and your career with our transformative retreats.",
       "img": "https://i.ibb.co/T8YCwxq/Professional-Development-Retreats.jpg",

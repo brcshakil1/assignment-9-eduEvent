@@ -11,8 +11,8 @@ const Team = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-b from-[#0095bd] to-[#53a7be] py-10">
-      <h2 className="text-center text-2xl uppercase  md:text-4xl font-bold border-black text-black w-[280px] md:w-[380px] mx-auto border-l-4 border-r-4 md:mb-10 mb-6">
+    <div className="bg-gradient-to-b from-[#1861c5] to-[#022f6e] py-10">
+      <h2 className="text-center text-2xl uppercase  md:text-4xl font-bold border-[#333] text-[#333] w-[280px] md:w-[380px] mx-auto border-l-4 border-r-4 md:mb-10 mb-6">
         Meet Out Team
       </h2>
       <p className="text-white text-center pb-3 md:pb-6 md:max-w-[600px] w-full mx-auto">

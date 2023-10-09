@@ -28,7 +28,7 @@ const Profile = () => {
         </tr>
       </table> */}
 
-      <div className="bg-[#0095bd] w-full  py-10 md:py-14 md:w-[550px] rounded-xl shadow-xl md:rounded-2xl md:shadow-2xl mx-auto flex flex-col justify-center items-center">
+      <div className="bg-[#1861c5] w-full  py-10 md:py-14 md:w-[550px] rounded-xl shadow-xl md:rounded-2xl md:shadow-2xl mx-auto flex flex-col justify-center items-center">
         <img
           className="w-[150px] h-[150px] border-4 border-white rounded-full"
           src={user?.photoURL || userProfile}

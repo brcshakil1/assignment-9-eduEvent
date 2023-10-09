@@ -10,11 +10,11 @@ const Service = ({ service }) => {
           <img className="h-full w-full object-cover" src={img} alt={title} />
         </div>
         <div className="h-full w-full absolute transition-bg duration-500 ease-in-out group-hover:bg-[#00000073] top-0 left-0"></div>
-        <div className="bg-gray-600 p-4">
-          <h2 className="text-2xl font-semibold pb-2">
+        <div className="bg-[#333] p-4">
+          <h2 className="text-2xl text-white font-semibold pb-2">
             {title.slice(0, 16)}..
           </h2>
-          <p className="">{description.slice(0, 84)}...</p>
+          <p className="text-white">{description.slice(0, 84)}...</p>
         </div>
       </div>
     </Link>

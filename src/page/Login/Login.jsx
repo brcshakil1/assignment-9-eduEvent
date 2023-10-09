@@ -34,7 +34,7 @@ const Login = () => {
       })
       .catch((err) => {
         if (err) {
-          toast.error("Your email or password is wrong. Please try again");
+          toast.error(err.message);
         }
       });
   };
@@ -44,7 +44,7 @@ const Login = () => {
       <div className="hero-content py-8  md:py-14">
         <div className=" w-full md:w-[600px] mx-auto border border-black py-10 md:py-14 px-6 md:px-10">
           <form onSubmit={handleLogin} className="">
-            <h2 className="text-2xl md:text-4xl font-semibold text-center">
+            <h2 className="text-2xl md:text-4xl font-semibold text-center text-[#333]">
               Welcome back
             </h2>
             <div className="form-control">
@@ -77,7 +77,9 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control py-5 ">
-              <button className="btn bg-[#0095bd] text-white">Login</button>
+              <button className="btn bg-[#1861c5] hover:bg-[#3e73be] text-white">
+                Login
+              </button>
             </div>
           </form>
           <div className="flex justify-center items-center gap-2 ">
@@ -87,16 +89,16 @@ const Login = () => {
           </div>
           <div
             onClick={handleGoogleSignUp}
-            className="flex items-center border border-black md:mx-8 mx-6 p-4 md:px-6 rounded-md cursor-pointer mt-5"
+            className="flex items-center border border-black p-4 md:px-6 rounded-md cursor-pointer mt-5"
           >
             <FcGoogle className="text-xl" />
-            <h2 className="mx-auto text-sm md:text-xl font-semibold ">
+            <h2 className="mx-auto text-sm md:text-xl font-semibold text-[#333]">
               Continue with google
             </h2>
           </div>
           <p className="text-center text-lg pt-4">
             New to EduEvent?{" "}
-            <Link className="text-blue-600" to="/signUp">
+            <Link className="text-[#1861c5] font-bold" to="/signUp">
               Sign up
             </Link>
           </p>
