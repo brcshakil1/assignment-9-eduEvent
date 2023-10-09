@@ -29,21 +29,21 @@ const Navbar = () => {
 
   const navLinks = (
     <>
-      <li>
+      <li onClick={() => setIsTrue(false)}>
         <NavLink to="/">Home</NavLink>
       </li>
-      <li>
+      <li onClick={() => setIsTrue(false)}>
         <NavLink to="/contact">Contact</NavLink>
       </li>
-      <li>
+      <li onClick={() => setIsTrue(false)}>
         <NavLink to="/team">Team</NavLink>
       </li>
       {user && (
         <>
-          <li>
+          <li onClick={() => setIsTrue(false)}>
             <NavLink to="/sendMessage">Send Message</NavLink>
           </li>
-          <li>
+          <li onClick={() => setIsTrue(false)}>
             <NavLink to="/profile">Profile</NavLink>
           </li>
         </>
