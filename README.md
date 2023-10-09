@@ -4,7 +4,7 @@ The website name is EduEvent. It's a Education and Training management website.
 
 # Live Link
 
-www.com
+https://eduevent-39570.web.app
 
 ## Features
 
