@@ -40,8 +40,8 @@ const Login = () => {
   };
 
   return (
-    <div className=" min-h-screen py-20">
-      <div className="hero-content py-8  md:py-14">
+    <div className=" min-h-screen py-20 mx-auto">
+      <div className="hero-content py-8  md:py-14 mx-auto">
         <div className=" w-full md:w-[600px] mx-auto border border-black py-10 md:py-14 px-6 md:px-10">
           <form onSubmit={handleLogin} className="">
             <h2 className="text-2xl md:text-4xl font-semibold text-center text-[#333]">
