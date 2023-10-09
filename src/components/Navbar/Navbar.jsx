@@ -67,7 +67,7 @@ const Navbar = () => {
       </div>
       {/* mobile nav start */}
       <div
-        className={`absolute md:hidden top-24 left-0 z-20 md:z-0 w-full h-screen md:h-auto bg-white md:bg-none py-8 px-10 ${
+        className={`absolute md:hidden top-20 left-0 z-20 md:z-0 w-full h-screen md:h-auto bg-white md:bg-none py-8 px-10 ${
           isTrue ? "block" : "hidden"
         }`}
       >
