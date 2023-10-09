@@ -34,7 +34,7 @@ const Login = () => {
       })
       .catch((err) => {
         if (err) {
-          toast.error(err.message);
+          toast.error("Password or email doesn't match. Please try again.");
         }
       });
   };

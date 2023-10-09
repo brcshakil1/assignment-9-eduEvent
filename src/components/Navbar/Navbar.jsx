@@ -89,7 +89,10 @@ const Navbar = () => {
         <hr />
         {user && (
           <button
-            onClick={handleLogout}
+            onClick={() => {
+              handleLogout();
+              setIsTrue(false);
+            }}
             className="py-2 px-4 bg-[#1861c5] rounded-md text-white font-bold mt-5"
           >
             Logout
@@ -116,7 +119,12 @@ const Navbar = () => {
                   {user?.displayName}
                 </a>
               </li>
-              <li onClick={handleLogout}>
+              <li
+                onClick={() => {
+                  handleLogout();
+                  setIsTrue(false);
+                }}
+              >
                 <a>Logout</a>
               </li>
             </ul>
@@ -124,7 +132,10 @@ const Navbar = () => {
         ) : (
           !loading && (
             <Link to="/login" className="text-lg">
-              <button className="py-2 px-4 bg-[#1861c5] rounded-md text-white font-bold">
+              <button
+                onClick={() => setIsTrue(false)}
+                className="py-2 px-4 bg-[#1861c5] rounded-md text-white font-bold"
+              >
                 Login
               </button>
             </Link>
