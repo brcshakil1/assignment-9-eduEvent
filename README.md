@@ -6,6 +6,14 @@ The website name is EduEvent. It's a Education and Training management website.
 
 https://eduevent-39570.web.app
 
+<!-- Unique Feature -->
+
+## Unique Feature
+
+Added two new features
+
+- A logged in user can send a message from "Send Message" route. The message will send to the admin/owner (By EmailJS)
+
 ## Features
 
 - Dynamic Routering

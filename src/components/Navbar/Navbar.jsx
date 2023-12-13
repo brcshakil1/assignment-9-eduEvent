@@ -33,6 +33,9 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li onClick={() => setIsTrue(false)}>
+        <NavLink to="/all-services">All Services</NavLink>
+      </li>
+      <li onClick={() => setIsTrue(false)}>
         <NavLink to="/contact">Contact</NavLink>
       </li>
       <li onClick={() => setIsTrue(false)}>

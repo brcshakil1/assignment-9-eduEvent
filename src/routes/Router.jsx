@@ -10,6 +10,7 @@ import SendMessage from "../components/SendMessage/SendMessage";
 import Team from "../page/Team/Team";
 import PrivetRoute from "./PrivetRoute";
 import Profile from "../page/Profile/Profile";
+import AllServices from "../page/AllServices/AllServices";
 
 const Router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const Router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/all-services",
+        element: <AllServices />,
       },
       {
         path: "/signUp",

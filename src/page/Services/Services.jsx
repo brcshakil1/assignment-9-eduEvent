@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Service from "../../components/Service/Service";
 
 const Services = () => {
@@ -13,6 +13,13 @@ const Services = () => {
         {data.services.map((service) => (
           <Service key={service.id} service={service} />
         ))}
+      </div>
+      <div className="text-center">
+        <Link to="all-services">
+          <button className="bg-[#1861C5] hover:bg-[#1860c5d3] rounded-md text-white font-bold py-2 px-4">
+            See All Services
+          </button>
+        </Link>
       </div>
     </div>
   );
