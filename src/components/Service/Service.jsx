@@ -4,7 +4,7 @@ import { BsCurrencyDollar } from "react-icons/bs";
 
 const Service = ({ service }) => {
   const { _id, title, description, img, price } = service;
-  console.log(service);
+  // console.log(service);
   return (
     <div className="group relative rounded-md overflow-hidden">
       <div className="h-[280px] md:h-[350px]">

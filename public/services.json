@@ -1,58 +1,46 @@
-{
-  "company": {
-    "name": "Your Education and Training Programs Events",
-    "description": "We are a leading events management company specializing in education and training programs. With a commitment to quality and excellence, we organize a wide range of events to empower individuals and organizations through learning and networking.",
-    "logo": "company_logo.png",
-    "contact": {
-      "email": "contact@yourcompany.com",
-      "phone": "+1-123-456-7890",
-      "address": "Central road, Moulvibazar, Bangladesh"
-    }
+[
+  {
+    "id": 1,
+    "title": "Workshops and Webinars",
+    "description": "Our Workshops and Webinars are designed to provide in-depth knowledge and practical skills in a variety of fields. Whether you're a professional looking to upskill or a student eager to learn, our workshops and webinars offer engaging sessions led by industry experts. Join us for interactive learning experiences that will enhance your expertise.",
+    "img": "https://i.ibb.co/4jQRR82/Workshops-and-Webinars.jpg",
+    "price": 399.99
   },
-  "services": [
-    {
-      "id": 1,
-      "title": "Workshops and Webinars",
-      "description": "Our Workshops and Webinars are designed to provide in-depth knowledge and practical skills in a variety of fields. Whether you're a professional looking to upskill or a student eager to learn, our workshops and webinars offer engaging sessions led by industry experts. Join us for interactive learning experiences that will enhance your expertise.",
-      "img": "https://i.ibb.co/4jQRR82/Workshops-and-Webinars.jpg",
-      "price": 399.99
-    },
-    {
-      "id": 2,
-      "title": "Career Fairs",
-      "description": "Discover job opportunities and connect with top employers at our Career Fairs. Our events bring together job seekers and companies looking to hire talent. You'll have the chance to network, attend informative sessions, and even interview on the spot. Don't miss out on advancing your career.",
-      "img": "https://i.ibb.co/tw6wWRD/Career-Fairs.jpg",
-      "price": 299.0
-    },
-    {
-      "id": 3,
-      "title": "Educational Conferences",
-      "description": "Our Educational Conferences are a hub for thought leaders, educators, and professionals to exchange ideas and insights. Dive into discussions on the latest trends, research, and innovations in your field. Be part of a vibrant community that fuels learning and growth.",
-      "img": "https://i.ibb.co/fG9s5rp/Educational-Conferences.jpg",
-      "price": 149.99
-    },
-    {
-      "id": 4,
-      "title": "Training Programs",
-      "description": "Enroll in our Training Programs to gain practical skills and certifications that will propel your career. Our comprehensive courses cover a wide range of subjects, ensuring you're well-prepared for the demands of your industry. Invest in your future success with our expert-led training.",
-      "img": "https://i.ibb.co/zH3Rj4P/Training-Programs.jpg",
-      "price": 299.99
-    },
+  {
+    "id": 2,
+    "title": "Career Fairs",
+    "description": "Discover job opportunities and connect with top employers at our Career Fairs. Our events bring together job seekers and companies looking to hire talent. You'll have the chance to network, attend informative sessions, and even interview on the spot. Don't miss out on advancing your career.",
+    "img": "https://i.ibb.co/tw6wWRD/Career-Fairs.jpg",
+    "price": 299.0
+  },
+  {
+    "id": 3,
+    "title": "Educational Conferences",
+    "description": "Our Educational Conferences are a hub for thought leaders, educators, and professionals to exchange ideas and insights. Dive into discussions on the latest trends, research, and innovations in your field. Be part of a vibrant community that fuels learning and growth.",
+    "img": "https://i.ibb.co/fG9s5rp/Educational-Conferences.jpg",
+    "price": 149.99
+  },
+  {
+    "id": 4,
+    "title": "Training Programs",
+    "description": "Enroll in our Training Programs to gain practical skills and certifications that will propel your career. Our comprehensive courses cover a wide range of subjects, ensuring you're well-prepared for the demands of your industry. Invest in your future success with our expert-led training.",
+    "img": "https://i.ibb.co/zH3Rj4P/Training-Programs.jpg",
+    "price": 299.99
+  },
 
-    {
-      "id": 5,
-      "title": "Experiential Learning Experiences",
-      "description": "Immerse yourself in hands-on Experiential Learning Experiences that bridge theory and practice. These interactive programs allow you to apply your knowledge in real-world scenarios, enhancing your skills and understanding. Get ready for transformative learning.",
-      "img": "https://i.ibb.co/K9zgRqG/Experiential-Learning-Experiences.jpg",
-      "price": 199.99
-    },
+  {
+    "id": 5,
+    "title": "Experiential Learning Experiences",
+    "description": "Immerse yourself in hands-on Experiential Learning Experiences that bridge theory and practice. These interactive programs allow you to apply your knowledge in real-world scenarios, enhancing your skills and understanding. Get ready for transformative learning.",
+    "img": "https://i.ibb.co/K9zgRqG/Experiential-Learning-Experiences.jpg",
+    "price": 199.99
+  },
 
-    {
-      "id": 6,
-      "title": "Professional Development Retreats",
-      "description": "Join our Professional Development Retreats to recharge, learn, and grow. These retreats offer a unique blend of skill-building, leadership development, and personal growth in a relaxed setting. Invest in yourself and your career with our transformative retreats.",
-      "img": "https://i.ibb.co/T8YCwxq/Professional-Development-Retreats.jpg",
-      "price": 499.99
-    }
-  ]
-}
+  {
+    "id": 6,
+    "title": "Professional Development Retreats",
+    "description": "Join our Professional Development Retreats to recharge, learn, and grow. These retreats offer a unique blend of skill-building, leadership development, and personal growth in a relaxed setting. Invest in yourself and your career with our transformative retreats.",
+    "img": "https://i.ibb.co/T8YCwxq/Professional-Development-Retreats.jpg",
+    "price": 499.99
+  }
+]

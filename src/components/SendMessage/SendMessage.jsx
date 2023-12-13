@@ -19,7 +19,7 @@ const SendMessage = () => {
   const [country, setCountry] = useState(countries[0]);
   const [message, setMessage] = useState("");
 
-  console.log(country);
+  // console.log(country);
 
   const handleSubmit = (e) => {
     e.preventDefault();

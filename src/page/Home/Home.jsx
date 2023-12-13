@@ -5,6 +5,7 @@ import Team from "../Team/Team";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Footer from "../../components/Footer/Footer";
+import Services from "../Services/Services";
 
 const Home = () => {
   useEffect(() => {
@@ -14,6 +15,9 @@ const Home = () => {
     <div>
       <Banner />
 
+      <div data-aos="fade-up">
+        <Services />
+      </div>
       <div data-aos="fade-up">
         <Team />
       </div>

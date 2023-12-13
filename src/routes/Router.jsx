@@ -45,7 +45,7 @@ const Router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
-        loader: () => fetch("/services.json"),
+        loader: () => fetch("./services.json"),
       },
       {
         path: "/team",

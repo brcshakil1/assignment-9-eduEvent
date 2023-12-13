@@ -40,7 +40,7 @@ const Banner = () => {
     return () => clearInterval(interval);
   }, [index, slides.length]);
 
-  console.log();
+  // console.log();
 
   return (
     <div
