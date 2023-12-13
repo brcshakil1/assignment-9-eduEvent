@@ -4,7 +4,9 @@ const useServices = () => {
   const { data: services, isPending } = useQuery({
     queryKey: ["all-services"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/services");
+      const res = await fetch(
+        "https://edu-event-server-site.vercel.app/services"
+      );
       const data = res.json();
       return data;
     },

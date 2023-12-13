@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import Service from "../../components/Service/Service";
 import { useState } from "react";
+import Loading from "../../components/Loading/Loading";
 
 const AllServices = () => {
   const [category, setCategory] = useState("");
@@ -11,7 +12,7 @@ const AllServices = () => {
     queryKey: ["all-services", category, page],
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:5000/services?category=${category}&page=${page}&limit=${limit}`
+        `https://edu-event-server-site.vercel.app/services?category=${category}&page=${page}&limit=${limit}`
       );
       const data = res.json();
       return data;
@@ -33,7 +34,7 @@ const AllServices = () => {
   };
 
   if (isPending) {
-    return <div>loading</div>;
+    return <Loading />;
   }
   console.log(data);
 

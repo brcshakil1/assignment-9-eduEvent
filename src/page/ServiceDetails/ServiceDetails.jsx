@@ -1,13 +1,16 @@
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { BsCurrencyDollar } from "react-icons/bs";
+import Loading from "./../../components/Loading/Loading";
 
 const ServiceDetails = () => {
   const { id } = useParams();
   const { data: service, isPending: isServicePending } = useQuery({
     queryKey: ["all-services"],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:5000/services/${id}`);
+      const res = await fetch(
+        `https://edu-event-server-site.vercel.app/services/${id}`
+      );
       const data = res.json();
       return data;
     },
@@ -15,7 +18,7 @@ const ServiceDetails = () => {
   console.log(service);
 
   if (isServicePending) {
-    return <div>loading...</div>;
+    return <Loading />;
   }
 
   //   const { title, description, img, price } = serviceDetails;
