@@ -22,3 +22,6 @@ Added two new features
 - User need to login for check service details
 - User can check his profile
 - User can send message directly from website to us
+
+## Technologies
+- Front-end: HTML, Tailwind, Daisy UI, JS and React.js
