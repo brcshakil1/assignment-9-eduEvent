@@ -1,8 +1,13 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Service from "../../components/Service/Service";
+import useServices from "../../hooks/useServices";
 
 const Services = () => {
-  const data = useLoaderData();
+  const [services, isPending] = useServices();
+
+  if (isPending) {
+    return <div>loading...</div>;
+  }
 
   return (
     <div className="mt-48 md:mt-28 md:mb-24">
@@ -10,9 +15,10 @@ const Services = () => {
         Services
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
-        {data.services.map((service) => (
-          <Service key={service.id} service={service} />
-        ))}
+        {services &&
+          services
+            .splice(0, 6)
+            ?.map((service) => <Service key={service._id} service={service} />)}
       </div>
       <div className="text-center">
         <Link to="all-services">

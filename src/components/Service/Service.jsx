@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import { BsCurrencyDollar } from "react-icons/bs";
 
 const Service = ({ service }) => {
-  const { id, title, description, img, price } = service;
-
+  const { _id, title, description, img, price } = service;
+  console.log(service);
   return (
     <div className="group relative rounded-md overflow-hidden">
       <div className="h-[280px] md:h-[350px]">
         <img className="h-full w-full object-cover" src={img} alt={title} />
       </div>
       <div className="h-full w-full absolute flex justify-center items-center transition-bg duration-500 ease-in-out group-hover:bg-[#00000073] top-0 left-0">
-        <Link to={`/services/${id}`}>
+        <Link to={`/services/${_id}`}>
           <button
             className="uppercase bg-[#1861c5] hidden group-hover:block text-white py-3 px-4 rounded"
             data-aos="fade-up"

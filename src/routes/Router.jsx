@@ -21,7 +21,6 @@ const Router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("/services.json"),
       },
       {
         path: "/login",
@@ -60,7 +59,6 @@ const Router = createBrowserRouter([
             <ServiceDetails />
           </PrivetRoute>
         ),
-        loader: () => fetch("/services.json"),
       },
       {
         path: "/profile",

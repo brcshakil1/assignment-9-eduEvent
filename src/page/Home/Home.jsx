@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Banner from "../../components/Banner/Banner";
 import Contact from "../Contact/Contact";
-import Services from "../Services/Services";
 import Team from "../Team/Team";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -14,9 +13,7 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <div className="max-w-7xl mx-auto" data-aos="fade-up">
-        <Services />
-      </div>
+
       <div data-aos="fade-up">
         <Team />
       </div>
